@@ -1,0 +1,17 @@
+<% provide(:title, @room.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1><br>
+        Welcome to room- <%= @room.name %>
+        <br></h1>
+        You can add maximum of <%= @room.capacity %> users
+ 
+<br>
+<%= render @room.slots %>
+<%= link_to "Create Meetings", new_room_slot_path(@room) %>
+<br>
+
+    </section>
+  </aside>
+</div>

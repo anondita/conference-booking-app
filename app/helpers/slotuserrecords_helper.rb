@@ -1,0 +1,2 @@
+module SlotuserrecordsHelper
+end

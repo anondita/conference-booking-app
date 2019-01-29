@@ -1,0 +1,20 @@
+<p>
+
+  <h3><strong>Meeting Name:</strong>
+  <%= @slot.name %></h3>
+  </p>
+  <p>
+  <strong>Meeting Date:</strong>
+  <%= dateformat(@slot.dateofslot) %>
+</p>
+<p>
+  <strong>Start Time:</strong>
+  <%= timeformat(@slot.starttime) %>
+</p><p>
+  <strong>End Time:</strong>
+  <%= timeformat(@slot.endtime) %>
+</p>
+
+<p>
+	<%= link_to 'Add Users', add_slot_user_path(:id => @slot.id) %>
+</p>

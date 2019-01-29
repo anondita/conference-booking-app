@@ -1,0 +1,23 @@
+<%= form_for @slot, url: room_slots_path do |s| %>
+<%= s.hidden_field :user_id, value: current_user.id %>
+ <%= render 'shared/error_messages_slot', object: @slot %>
+  <p>
+    <%= s.label :MeetingName %><br>
+    <%= s.text_field :name %>
+  </p>
+  <p>
+    <%= s.label :Starttime %><br>
+    <%= s.time_select :starttime %>
+  </p>
+  <p>
+    <%= s.label :endtime %><br>
+    <%= s.time_select :endtime %>
+  </p>
+  <p>
+    <%= s.label :DateOfSlot %><br>
+    <%= s.date_select :dateofslot %>
+  </p>
+  <p>
+    <%= s.submit %>
+  </p>
+<%end%>

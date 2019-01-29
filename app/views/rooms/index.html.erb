@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag "/custom.css" %>
+
+<p id="notice"></p>
+<% provide(:title, 'All users') %>
+<h1>Existing Rooms</h1>
+
+
+<table>
+ <thead>
+   <tr>
+     <th>Room</th>
+     <th colspan="1"></th>
+   </tr>
+ </thead>
+
+ <tbody>
+   <% @room.each do |room| %>
+     <tr>
+       
+       <td><%= room.name %></td>
+       <td><%= link_to "Show Room", showroom_path(room.id) %></td>
+       <td><% if current_user.admin? && !current_user?(@user) %>
+    <%= link_to "delete", room, method: :delete,
+                                 data: { confirm: "You sure?" } %> <% end %></td>
+     </tr>
+   <% end %>
+ </tbody>
+</table> <%= link_to "Create Room", new_room_path %> 
+<br>

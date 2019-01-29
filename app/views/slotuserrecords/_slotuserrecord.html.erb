@@ -1,0 +1,5 @@
+<p>
+ <% slot=  Slot.find(slotuserrecord.slot_id) %>
+<b>Meeting- </b><%= slot.name %>
+ <%= link_to 'Show meeting' , room_slot_path(slot.room_id,:id => slot.id) %>
+</p>

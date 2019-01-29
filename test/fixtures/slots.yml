@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room_id: MyString
+  starttime: MyString
+  endtime: MyString
+  dateofslot: MyString
+  name: MyString
+
+two:
+  room_id: MyString
+  starttime: MyString
+  endtime: MyString
+  dateofslot: MyString
+  name: MyString
