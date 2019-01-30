@@ -12,7 +12,6 @@ class SlotuserrecordsController < ApplicationController
 			flash[:success]='user added successfully'
 			redirect_to room_slot_path(@roomid,@slotuserrecord.slot_id)
 		else
-			byebug
        		flash[:danger]='Cannot add anymore users'
        		redirect_to room_slot_path(@roomid,@slotuserrecord.slot_id)
     	end
